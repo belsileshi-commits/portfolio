@@ -1,3 +1,4 @@
+/* Global Layout and Reset Settings */
 * {
     margin: 0;
     padding: 0;
@@ -17,61 +18,23 @@ body {
     min-height: 100vh;
 }
 
-h1 {
-    color: darkblue;
-    text-align: center;
-}
-
+/* Structural Div Rule (Fixed: Removed borders and margins causing overlaps) */
 div {
-    padding: 20px;
-    border: 3px solid black;
-    margin: 30px;
+    box-sizing: border-box;
 }
 
-header {
-    background-color: #711e8a;
-    color: white;
-    text-align: center;
-    padding: 40px;
-    font-size: 40px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 40px;
-}
-
-nav {
-    background-color: #14213d; /* Fixed missing # sign */
-    text-align: center;
-    padding: 15px;
-}
-
-nav a {
-    color: white; /* Fixed typo 'columns' to 'color' */
-    text-decoration: none;
-    margin: 20px;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #fca311;
-}
-
+/* Main Content Area Styling */
 main {
     width: 80%;
     margin: auto;
     padding: 20px;
-    flex: 1; /* Pushes the footer down if content is short */
+    flex: 1; /* Automatically expands to push the footer down if page content is short */
 }
 
-section {
-    background: white;
-    padding: 25px;
-    margin-top: 25px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Softened extreme black shadow */
+/* Typography Settings */
+h1 {
+    color: darkblue;
+    text-align: center;
 }
 
 h2 {
@@ -92,14 +55,58 @@ ol li {
     font-size: 17px;
 }
 
+/* Header Sections */
+header {
+    background-color: #711e8a;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    font-size: 40px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+/* Navigation System (Fixed: missing "#" and color typo) */
+nav {
+    background-color: #14213d; 
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white; 
+    text-decoration: none;
+    margin: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #fca311;
+}
+
+/* Content Blocks */
+section {
+    background: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Softened shadow styling */
+}
+
+/* Media Elements (Fixed: added missing "solid" property) */
 img {
     display: block;
     margin: auto;
     width: 250px;
     border-radius: 20px;
-    border: 4px solid #1e3a8a; /* Added missing 'solid' parameter */
+    border: 4px solid #1e3a8a; 
 }
 
+/* Data Tables (Fixed: broken hex color and selector structure) */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -114,14 +121,15 @@ th {
 
 td {
     padding: 12px;
-    border: 1px solid #aaccff; /* Fixed broken color hex code */
+    border: 1px solid #aaccff; 
     text-align: center;
 }
 
-tr:nth-child(even) { /* Fixed broken selector structure */
+tr:nth-child(even) { 
     background-color: #f2f2f2;
 }
 
+/* Forms and User Inputs (Fixed: "20ppx" pixel unit typo) */
 form {
     margin-top: 20px;
 }
@@ -134,8 +142,8 @@ input {
     width: 500px;
     padding: 12px;
     margin-top: 8px;
-    margin-bottom: 20px; /* Fixed typo '20ppx' to '20px' */
-    border: 1px solid #aaccff; /* Fixed broken color hex code */
+    margin-bottom: 20px; 
+    border: 1px solid #aaccff; 
     border-radius: 5px;
     font-size: 16px;
 }
@@ -154,11 +162,11 @@ button:hover {
     background-color: #fca311;
 }
 
+/* Footer Element (Fixed: converted hardcoded spacing to dynamic pinning) */
 footer {
     background-color: #142113;
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: auto; /* Changed from 40px to auto to lock footer at bottom */
+    margin-top: auto; 
 }
-
